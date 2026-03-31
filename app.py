@@ -13,7 +13,7 @@ def create_time_list(start_h, end_h):
 
 start_list = create_time_list(9, 15)
 end_list = create_time_list(11, 20)
-rest_list = ["0:15","0:30","0:45","1:00","1:15","1:30","1:45","2:00","2:15","2:30"]
+rest_list = ["0:00","0:15","0:30","0:45","1:00","1:15","1:30","1:45","2:00","2:15","2:30"]
 
 st.title("日当計算アプリ")
 
