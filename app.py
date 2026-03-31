@@ -15,7 +15,7 @@ start_list = create_time_list(9, 15)
 end_list = create_time_list(11, 20)
 rest_list = ["0:00","0:15","0:30","0:45","1:00","1:15","1:30","1:45","2:00","2:15","2:30"]
 
-st.title("日当計算アプリ")
+st.title("作業時間計算アプリ")
 
 start = st.selectbox("開始時刻", start_list)
 end = st.selectbox("終了時刻", end_list)
@@ -35,6 +35,8 @@ if st.button("計算"):
     else:
         work_H = f"{work_m / 60:.2f}"
         normal_H = f"{(work_m - drive_m) / 60:.2f}"
+        drive_H = f"{drive_m / 60:.2f}"
 
         st.success(f"拘束時間: {work_H}時間")
-        st.success(f"普通作業時間: {normal_H}時間")
+        st.success(f"普通時間: {normal_H}時間")
+        st.success(f"運転時間: {drive_H}時間")
